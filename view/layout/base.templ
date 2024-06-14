@@ -1,0 +1,16 @@
+package layout
+
+templ Base(title string) {
+  <html>
+    <head>
+      <title>{title}</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/public/style.css" />
+    </head>
+    <body>
+      <div class="text-red-500">My layout1</div>
+      { children... }
+    </body>
+  </html>
+}
