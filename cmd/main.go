@@ -9,6 +9,7 @@ import (
     "github.com/go-chi/chi/v5/middleware"
     "github.com/joho/godotenv"
     "github.com/aidosgal/nextgen/handler"
+    "github.com/aidosgal/nextgen/storage/postgres"
 )
 
 func main() {
@@ -16,6 +17,9 @@ func main() {
     if err != nil {
         log.Println("Error loading .env file")
     }
+
+    db := postgres.NewPostgres("bizzar", "220696", "prodcenter");
+    _ = db
 
     port := os.Getenv("APP_PORT")
 
